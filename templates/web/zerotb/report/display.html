@@ -1,4 +1,4 @@
-[% 
+[%
     PROCESS "report/photo-js.html";
     PROCESS "maps/${map.type}.html";
 
@@ -10,19 +10,23 @@
 %]
 
 [% map_html %]
+</div>
+
+<div id="map_sidebar">
+
+    [% INCLUDE 'report/banner.html' %]
+
+    [% INCLUDE 'report/_main.html' %]
+
+    <div class="shadow-wrap">
+        <ul id="key-tools">
+            <li><a class="chevron" id="key-tool-problems-nearby" href="[% c.uri_for( '/around', { lat => latitude, lon => longitude } ) %]">[% loc( 'Clinics nearby' ) %]</a></li>
+        </ul>
+
+    </div>
+
+    [% INCLUDE 'report/update-form.html' %]
 
 </div>
 
-[% INCLUDE 'report/banner.html' %]
-
-[% INCLUDE 'report/_main.html' %]
-
-<div class="shadow-wrap">
-    <ul id="key-tools">
-        <li><a class="chevron" id="key-tool-problems-nearby" href="[% c.uri_for( '/around', { lat => latitude, lon => longitude } ) %]">[% loc( 'Clinics nearby' ) %]</a></li>
-    </ul>
-
-</div>
-
-[% INCLUDE 'report/update-form.html' %]
 [% INCLUDE 'footer.html' %]
