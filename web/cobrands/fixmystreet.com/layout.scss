@@ -209,37 +209,6 @@ body.twothirdswidthpage {
 
 #footer-nav {
     display: block;
-    border: 0px;
-    border-top: 0.25em solid #ffd000;
-    border-image: url(images/tile-y.jpg) 30 0 repeat;
-
-    .tablewrapper {
-      max-width: 60em;
-      margin: 0 auto;
-      background: $base_bg;
-      ul {
-        @include list-reset-soft;
-        float: $left;
-        li {
-          display: inline;
-          float: $left;
-          a, span {
-            display: block;
-            color: $nav_fg;
-            background: none;
-            border-bottom: none;
-            padding: 0.75em;
-            font-size: 0.9em;
-          }
-        }
-      }
-      #footer-main-nav {
-        display: block;
-      }
-      #footer-help-nav {
-        float: $right;
-      }
-    }
 }
 
 .next-steps {
